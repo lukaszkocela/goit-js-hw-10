@@ -15,6 +15,26 @@ body {
 #search-box {
   font: inherit;
   padding: 8px;
-  max-width: 320px;
+  max-width: 400px;
   margin-bottom: 16px;
+}
+
+#search-box:hover,
+:focus {
+  background-color: #d3d3d3;
+}
+
+.country-list,
+.country-info {
+  list-style: none;
+}
+
+.country-info {
+  padding-left: 25px;
+}
+
+.country-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
