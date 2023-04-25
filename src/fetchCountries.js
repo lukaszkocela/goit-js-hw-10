@@ -27,20 +27,19 @@ export const fetchCountries = name => {
       Notiflix.Notify.failure('Oops, there is no country with that name');
       clearCountries();
     });
-  name.currentTarget.reset();
 };
 
-const tooManyCountries = country => {
+const tooManyCountries = data => {
   clearCountries();
   Notiflix.Notify.info(
     'Too many matches found. Please enter a more specific name.'
   );
 };
 
-const severalCountries = country => {
+const severalCountries = data => {
   clearCountries();
 
-  const countries = country
+  const countries = data
     .map(country => {
       return `<li><img src="${country.flags.svg}" alt="${
         country.flags.alt
